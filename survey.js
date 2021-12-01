@@ -18,11 +18,9 @@ const questions = [
 let answers = [];
 
 const profileQuestion = (promptQ) => {
-  return new Promise((callbackFn, errorFn) => {
+  return new Promise((callbackFn) => {
     rl.question(promptQ, (uInput) => {
       callbackFn(uInput);
-    }, () => {
-      errorFn();
     });
   });
 };
